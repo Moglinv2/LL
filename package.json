@@ -24,6 +24,7 @@
     "dependencies": {
         "@popperjs/core": "^2.11.5",
         "bootstrap": "^5.2.0",
+        "git": "^0.1.5",
         "qrcode.vue": "^3.3.3",
         "sweetalert2": "^11.7.0"
     }
