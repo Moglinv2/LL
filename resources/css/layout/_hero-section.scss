@@ -1,0 +1,171 @@
+/* ==== 
+ --------- (4.2) hero section styles start ---------
+ ==== */
+
+// hero section
+.hero {
+  overflow: hidden;
+  position: relative;
+  z-index: 9;
+  @include responsive(xl) {
+    padding: 254px 0px 340px;
+  }
+  @include responsive(md) {
+    background-position: left center;
+    padding: 200px 0px 335px;
+  }
+  @include responsive(sm) {
+    padding: 160px 0px 315px;
+  }
+  @include responsive(xxl) {
+    padding: 280px 0px 360px;
+  }
+  @include responsive(xxxl) {
+    padding: 280px 0px 365px;
+  }
+  .eth {
+    max-width: 8vw;
+    top: 7%;
+    left: 9%;
+    opacity: 0.6;
+    animation: pulse 20s forwards alternate infinite;
+    @include responsive(md) {
+      top: 18%;
+    }
+    @include responsive(xs) {
+      max-width: 17vw;
+    }
+  }
+
+  .eth--small {
+    max-width: 5vw;
+    bottom: 30%;
+    left: 40%;
+    opacity: 0.3;
+    animation: pulse 10s forwards linear infinite;
+    @include responsive(md) {
+      max-width: 8vw;
+      bottom: 20%;
+      left: 47%;
+    }
+    @include responsive(xs) {
+      max-width: 11vw;
+      bottom: 12%;
+      left: 54%;
+    }
+  }
+
+  .btc {
+    max-width: 13vw;
+    bottom: 17%;
+    left: 2%;
+    opacity: 0.3;
+    animation: rotate 10s forwards alternate infinite;
+    @include responsive(md) {
+      bottom: 8%;
+    }
+    @include responsive(xs) {
+      max-width: 23vw;
+    }
+  }
+}
+
+.hero__content {
+  h4 {
+    color: $septenary-color;
+  }
+  .button {
+    font-weight: 700;
+  }
+}
+
+.hero__cta {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 30px;
+  @include responsive(xs) {
+    gap: 15px;
+  }
+  .video-popup {
+    width: 54px;
+    height: 54px;
+    line-height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #6c4edd;
+    margin-right: 0px;
+    @include responsive(xs) {
+      width: 44px;
+      height: 44px;
+      line-height: 44px;
+    }
+    img {
+      border: none;
+      outline: none;
+      width: 23px;
+      height: 27px;
+      @include responsive(xs) {
+        width: 15px;
+        height: 18px;
+      }
+    }
+  }
+}
+
+.hero__illustration {
+  img {
+    max-width: 43vw;
+    height: auto;
+    @include responsive(minScreenSmallLaptop) {
+      position: absolute;
+      transform: translateY(-50%);
+    }
+    @include responsive(xxxl) {
+      transform: translateY(-37%);
+    }
+    @include responsive(desktop) {
+      max-width: 35vw;
+    }
+  }
+}
+
+.hero__animation {
+  img {
+    display: inline-block;
+    position: absolute;
+    z-index: -1;
+  }
+}
+
+.mfp-container {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  @include responsive(md) {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+.mfp-bg {
+  z-index: 99999999999;
+  opacity: 1;
+}
+
+.mfp-wrap {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 9999999999 !important;
+}
+
+/* ==== 
+ --------- (4.2) hero secction styles end ---------
+ ==== */

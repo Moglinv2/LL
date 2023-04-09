@@ -1,0 +1,23 @@
+@import "~bootstrap/scss/bootstrap";
+@import "./abstracts/mixins";
+@import "./abstracts/variables";
+
+// base styles
+@import "./base/reset";
+@import "./base/typography";
+@import "./base/global";
+@import "./base/animations";
+
+// components styles
+@import "./components/preloader";
+@import "./components/breadcrumb";
+@import "./components/buttons";
+@import "./components/forms";
+
+// layout styles
+@import "./layout/header";
+@import "./layout/hero-section";
+@import "./layout/banner";
+@import "./layout/sidebar";
+@import "./layout/sections";
+@import "./layout/footer";

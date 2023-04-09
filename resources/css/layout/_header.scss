@@ -1,0 +1,813 @@
+/* ==== 
+ --------- (4.1) header styles start ---------
+ ==== */
+
+ header {
+  background-color: transparent;
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  top: 50px;
+  z-index: 99;
+  @include responsive(md) {
+    top: 0px;
+  }
+  li {
+    margin-top: 0px;
+  }
+}
+
+.navbar__active {
+  position: fixed;
+  top: 0px;
+  background-image: linear-gradient(
+    0deg,
+    rgba(38, 38, 78, 1) 0%,
+    rgba(38, 38, 78, 1) 13%,
+    rgb(38, 38, 78) 52%,
+    rgba(38, 38, 78, 1) 53%,
+    rgba(38, 38, 78, 1) 83%,
+    rgba(38, 38, 78, 1) 100%
+  );
+}
+
+.header__dashboard {
+  position: static;
+  transition: $primary-transition;
+  z-index: 999;
+}
+
+//  topbar start
+.topbar {
+  padding: 10px 0px;
+  background-color: transparent;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 9;
+}
+
+.topbar__dashboard {
+  position: static;
+}
+
+.topbar__active {
+  position: static;
+}
+
+.topbar__left__content {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  p {
+    margin-top: 0px;
+    display: flex;
+    align-items: center;
+  }
+  a {
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #7158d9;
+    border-radius: 50%;
+    margin-right: 20px;
+    img {
+      border: none;
+      outline: none;
+      max-width: 100%;
+      height: auto;
+    }
+    i {
+      font-size: 14px;
+      color: $senary-color;
+    }
+  }
+}
+
+// navbar styles start
+.navbar {
+  background-image: linear-gradient(
+    0deg,
+    rgba(38, 38, 78, 0.2) 0%,
+    rgba(38, 38, 78, 0.6) 13%,
+    rgb(38, 38, 78) 52%,
+    rgba(38, 38, 78, 0.99) 53%,
+    rgba(38, 38, 78, 0.6) 83%,
+    rgba(38, 38, 78, 0.2) 100%
+  );
+  padding: 22px 0px !important;
+  border: 1px solid rgb(81, 49, 202);
+  border-right: none;
+  border-left: none;
+  z-index: 999;
+  @include responsive(xl) {
+    padding: 20px 0px !important;
+  }
+}
+
+.navbar__out {
+  display: flex;
+  align-items: center;
+  span {
+    margin-top: 0px;
+  }
+  .nice-select {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    height: auto !important;
+    line-height: inherit !important;
+    &::after {
+      width: 10px;
+      height: 10px;
+      margin-top: -7px;
+      border-color: $white;
+    }
+    .current {
+      color: $white;
+      font-weight: 700;
+    }
+    .option {
+      background-color: $white;
+      color: $ocotonary-color;
+      min-height: auto;
+      line-height: 28px;
+      padding: 5px 15px;
+    }
+  }
+}
+
+.tertiary--nav {
+  @include responsive(xs) {
+    margin-top: 25px !important;
+  }
+}
+
+.nav__group__btn {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-left: 20px;
+  .button {
+    width: 130px;
+    @include responsive(xl) {
+      width: 110px;
+      padding: 6px 13px;
+      font-size: 16px;
+    }
+  }
+  .active__btn {
+    background-color: $quaternary-color;
+    color: $white;
+    &::before {
+      background-color: $quaternary-color;
+    }
+    &::after {
+      background-color: $quaternary-color;
+    }
+  }
+}
+
+.navbar {
+  padding: 0px;
+}
+
+.navbar-brand {
+  margin: 0px;
+  padding: 0px;
+}
+
+.logo {
+  max-width: 160px;
+  height: 44px;
+  border: none;
+  outline: none;
+  @include responsive(xl) {
+    max-width: 130px;
+    height: auto;
+  }
+  @include responsive(xs) {
+    max-width: 110px;
+    height: 30px;
+  }
+}
+
+.nav-item {
+  @include responsive(lg) {
+    margin-bottom: 2px;
+  }
+  @include responsive(xs) {
+    .button {
+      max-width: 100%;
+      width: 100%;
+      display: block;
+      border-radius: 0px;
+      text-align: left;
+      padding: 10px 16px;
+    }
+    &:last-of-type {
+      margin-bottom: 0px;
+      .button--last {
+        display: block;
+        width: 100%;
+        border-radius: 0px;
+      }
+    }
+  }
+  &:nth-last-of-type(2) {
+    @include responsive(lg) {
+      margin-bottom: 0px;
+    }
+    @include responsive(xs) {
+      margin-bottom: 2px;
+    }
+  }
+}
+
+.nav-link {
+  color: $white;
+  font-weight: 700;
+  padding: 8px 15px !important;
+  transition: all 0.3s ease-in;
+  @include responsive(xl) {
+    font-size: 16px;
+    line-height: 25px;
+    padding: 8px 12px !important;
+  }
+  @include responsive(lg) {
+    padding: 10px 16px !important;
+    background-color: $white;
+    color: $ocotonary-color;
+  }
+  &:hover {
+    color: $septenary-color;
+  }
+}
+
+.dropdown {
+  .dropdown-toggle {
+    color: $white !important;
+    @include responsive(lg) {
+      color: $ocotonary-color !important;
+    }
+    &:hover {
+      color: $senary-color !important;
+    }
+    @include responsive(lg) {
+      position: relative;
+    }
+    &::after {
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      content: "\f107";
+      border: none;
+      font-size: 16px;
+      vertical-align: 0px !important;
+      @include responsive(xl) {
+        font-size: 14px;
+      }
+      @include responsive(lg) {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        bottom: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 100%;
+        margin: 0px;
+        border-left: 2px solid $ocotonary-color;
+      }
+    }
+  }
+  .show {
+    color: $senary-color !important;
+    &::after {
+      transform: rotate(180deg);
+      @include responsive(lg) {
+        border-right: 2px solid $ocotonary-color;
+        border-left: 0px;
+      }
+    }
+  }
+  .dropdown-menu {
+    margin: 0px;
+    padding: 0px;
+    background-color: $white;
+    margin-top: 0px;
+    border-top: 3px solid $senary-color;
+    box-shadow: $primary-shadow;
+    border-radius: 0px;
+    transition: $primary-transition;
+    max-height: 200px;
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: #e4e4e4;
+      border-radius: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: $senary-color;
+      border-radius: 10px;
+    }
+    @include responsive(lg) {
+      width: 90%;
+      margin: 15px auto;
+    }
+    .dropdown-item {
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 500;
+      padding: 8px 16px;
+      color: $primary-color;
+      border-bottom: 1px solid #e4e4e4;
+      transition: $primary-transition;
+      &:hover {
+        background-color: $senary-color;
+        color: $ocotonary-color;
+        padding-left: 20px;
+      }
+    }
+    .dropdown-item-active {
+      background-color: $quaternary-color;
+      color: $white;
+      padding-left: 20px;
+    }
+    li {
+      &:last-of-type {
+        .dropdown-item {
+          border-bottom: 0px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .dropdown {
+    .dropdown-menu {
+      display: block;
+      opacity: 0;
+      visibility: hidden;
+    }
+    &:hover {
+      .dropdown-menu {
+        margin-top: 0px;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+    .show {
+      color: $white !important;
+      &::after {
+        transform: rotate(0deg);
+      }
+    }
+  }
+}
+
+.navbar-collapse {
+  @include responsive(lg) {
+    margin-top: 15px;
+    max-height: 300px;
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: #e4e4e4;
+      border-radius: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: $senary-color;
+      border-radius: 10px;
+    }
+  }
+}
+
+.navbar-toggler {
+  border: none;
+  padding: 0px;
+  margin: 0px 0px 0px 20px;
+  line-height: 0px;
+  @include responsive(xs) {
+    margin: 0px;
+  }
+  &:focus {
+    box-shadow: none;
+    outline: none;
+  }
+  span {
+    transform: translateY(0px);
+  }
+  .icon-bar {
+    width: 35px;
+    height: 2px;
+    background-color: $senary-color;
+    margin: 0px;
+    display: block;
+    transition: all 0.3s;
+    @include responsive(xs) {
+      width: 30px;
+    }
+  }
+  .middle-bar {
+    margin: 6px 0px;
+    opacity: 1;
+  }
+}
+
+.toggle-active {
+  .top-bar {
+    transform: rotate(-45deg) translate(-7px, 4px);
+    background: $senary-color;
+  }
+  .middle-bar {
+    opacity: 0;
+  }
+  .bottom-bar {
+    transform: rotate(45deg) translate(-7px, -4px);
+    background: $senary-color;
+  }
+}
+
+.header__alt {
+  z-index: 999;
+  .navbar__out {
+    .navbar-toggler {
+      @include responsive(xs) {
+        margin-left: 15px;
+        .icon-bar {
+          width: 20px;
+        }
+      }
+      @include responsive(xxs) {
+        margin-left: 10px;
+      }
+    }
+  }
+  .logo {
+    @include responsive(xs) {
+      max-width: 100px;
+      height: auto;
+    }
+  }
+  .nice-select {
+    @include responsive(xs) {
+      display: none;
+    }
+  }
+}
+
+// dashboard nav
+.dashboard__nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  position: relative;
+  z-index: 99999999;
+  margin-left: 25px;
+  @include responsive(lg) {
+    gap: 20px;
+  }
+  @include responsive(xs) {
+    gap: 15px;
+    margin-left: 0px;
+  }
+  @include responsive(xxs) {
+    gap: 10px;
+  }
+  .messages {
+    .message__icon__wrapper {
+      line-height: 0px;
+      display: inline-block;
+      position: relative;
+      margin-right: 10px;
+      i {
+        font-size: 24px;
+        color: $senary-color;
+        @include responsive(xs) {
+          font-size: 18px;
+        }
+      }
+      span {
+        position: absolute;
+        top: -5px;
+        right: -10px;
+        font-size: 12px;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        text-align: center;
+        color: $white;
+        background-color: #6c4edd;
+        border-radius: 50%;
+        @include responsive(sm) {
+          font-size: 10px;
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+    .message__wrapper {
+      position: absolute;
+      top: calc(100% + 32px);
+      right: 0%;
+      width: 276px;
+      height: 360px;
+      background-color: $primary-color;
+      border-radius: 20px;
+      opacity: 0;
+      visibility: hidden;
+      box-shadow: $primary-shadow;
+      transition: $primary-transition;
+      @include responsive(xl) {
+        top: calc(100% + 40px);
+      }
+      @include responsive(sm) {
+        right: -20%;
+        width: 240px;
+        height: 300px;
+      }
+      .message__head {
+        padding: 10px 20px;
+        text-align: center;
+        background-color: #47479d;
+        border-radius: 20px 20px 0px 0px;
+        p {
+          &:first-of-type {
+            color: $septenary-color;
+            margin-bottom: 8px;
+            font-weight: 500;
+          }
+        }
+      }
+      .message__single {
+        padding: 15px 20px;
+        background-color: #3d3d98;
+        text-align: center;
+        h6 {
+          margin-bottom: 2px;
+        }
+        .tertiary {
+          color: $white;
+        }
+        .time {
+          margin-top: 20px;
+          text-align: right;
+          font-size: 14px;
+        }
+        a {
+          color: $septenary-color;
+          font-size: 16px;
+          &:hover {
+            color: $white;
+          }
+        }
+      }
+      .mark__read {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        padding: 10px 20px;
+        border-top: 1px solid #47479d;
+        text-align: right;
+        a {
+          display: inline-block;
+          line-height: 1;
+          color: #d3e5ff;
+          &:hover {
+            color: $septenary-color;
+          }
+        }
+      }
+    }
+    .message__wrapper__active {
+      opacity: 1;
+      visibility: visible;
+      top: calc(100% + 22px);
+      @include responsive(xl) {
+        top: calc(100% + 20px);
+      }
+    }
+  }
+  .notifications {
+    .icon__wrapper {
+      line-height: 0px;
+      display: inline-block;
+      position: relative;
+      margin-right: 10px;
+      i {
+        font-size: 24px;
+        color: $senary-color;
+        @include responsive(xs) {
+          font-size: 18px;
+        }
+      }
+      span {
+        position: absolute;
+        top: -5px;
+        right: -10px;
+        font-size: 12px;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        text-align: center;
+        color: $white;
+        background-color: #6c4edd;
+        border-radius: 50%;
+        @include responsive(sm) {
+          font-size: 10px;
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+    .notification__wrapper {
+      position: absolute;
+      top: calc(100% + 32px);
+      right: 0%;
+      width: 276px;
+      height: 360px;
+      background-color: $primary-color;
+      border-radius: 20px;
+      opacity: 0;
+      visibility: hidden;
+      box-shadow: $primary-shadow;
+      transition: $primary-transition;
+      @include responsive(xl) {
+        top: calc(100% + 40px);
+      }
+      @include responsive(sm) {
+        right: -20%;
+        width: 240px;
+        height: 300px;
+      }
+      .notification__head {
+        padding: 10px 20px;
+        text-align: center;
+        background-color: #47479d;
+        border-radius: 20px 20px 0px 0px;
+        p {
+          &:first-of-type {
+            color: $septenary-color;
+            margin-bottom: 8px;
+            font-weight: 500;
+          }
+        }
+      }
+      .notification__single {
+        padding: 15px 20px;
+        background-color: #3d3d98;
+        h6 {
+          margin-bottom: 15px;
+        }
+        .tertiary {
+          color: #d3e5ff;
+        }
+        .time {
+          margin-top: 20px;
+          text-align: right;
+          font-size: 14px;
+        }
+      }
+      .mark__read {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        padding: 10px 20px;
+        border-top: 1px solid #47479d;
+        text-align: right;
+        a {
+          display: inline-block;
+          line-height: 1;
+          color: #d3e5ff;
+          &:hover {
+            color: $septenary-color;
+          }
+        }
+      }
+    }
+    .notification__wrapper__active {
+      opacity: 1;
+      visibility: visible;
+      top: calc(100% + 22px);
+      @include responsive(xl) {
+        top: calc(100% + 20px);
+      }
+    }
+  }
+  .profile__meta {
+    .profile__small {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      @include responsive(xs) {
+        width: 30px;
+        height: 30px;
+      }
+      img {
+        border: none;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .profile__info {
+      position: absolute;
+      top: calc(100% + 32px);
+      right: 0px;
+      background-color: #3d3d98;
+      border-radius: 20px;
+      opacity: 0;
+      visibility: hidden;
+      box-shadow: $primary-shadow;
+      transition: $primary-transition;
+      @include responsive(xl) {
+        top: calc(100% + 40px);
+      }
+      a {
+        display: block;
+        padding: 10px 30px;
+        font-weight: 500;
+        color: $white;
+        border-bottom: 1px solid #47479d;
+        @include responsive(sm) {
+          padding: 10px 20px;
+        }
+        &:last-of-type {
+          border-bottom: none;
+          border-radius: 0px 0px 20px 20px;
+        }
+        &:hover {
+          background-color: #47479d;
+        }
+      }
+    }
+    .profile__info__head {
+      display: flex;
+      align-items: center;
+      padding: 20px 30px;
+      gap: 20px;
+      background-color: #47479d;
+      border-bottom: 1px solid #47479d;
+      border-radius: 20px 20px 0px 0px;
+      transition: $primary-transition;
+      @include responsive(sm) {
+        padding: 20px;
+      }
+      a {
+        color: $septenary-color;
+        font-weight: 500;
+        margin-bottom: 5px;
+        display: inline-block;
+        padding: 0px;
+        &:hover {
+          color: $white;
+        }
+      }
+      p {
+        margin-top: 0px;
+      }
+      &:hover {
+        background-color: #47479d;
+      }
+    }
+    .profile__info__active {
+      opacity: 1;
+      visibility: visible;
+      top: calc(100% + 22px);
+      @include responsive(xl) {
+        top: calc(100% + 20px);
+      }
+    }
+  }
+  .nice-select {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-right: 20px;
+    @include responsive(sm) {
+      margin-right: 16px;
+    }
+    &::after {
+      right: -16px;
+      @include responsive(xs) {
+        width: 7px;
+        height: 7px;
+        margin-top: -4px;
+        right: -12px;
+      }
+    }
+  }
+}
+
+/* ==== 
+ --------- (4.1) header styles end ---------
+ ==== */

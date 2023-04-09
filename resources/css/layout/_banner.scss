@@ -1,0 +1,175 @@
+/* ==== 
+ --------- (4.3) banner styles start ---------
+ ==== */
+
+// banner styles start
+.banner {
+  padding: 270px 0px 120px;
+  z-index: 1;
+  @include responsive(xl) {
+    padding: 255px 0px 120px;
+  }
+  @include responsive(lg) {
+    padding: 235px 0px 100px;
+  }
+  @include responsive(md) {
+    padding: 180px 0px 80px;
+  }
+  @include responsive(sm) {
+    padding: 160px 0px 80px;
+  }
+  @include responsive(sm) {
+    padding: 150px 0px 80px;
+  }
+}
+
+.banner--secondary {
+  padding: 265px 0px 355px;
+  @include responsive(xl) {
+    padding: 250px 0px 355px;
+  }
+  @include responsive(lg) {
+    padding: 225px 0px 335px;
+  }
+  @include responsive(md) {
+    padding: 160px 0px 315px;
+  }
+  @include responsive(sm) {
+    padding: 145px 0px 315px;
+  }
+}
+
+.banner--blog {
+  padding: 270px 0px 325px;
+  @include responsive(xl) {
+    padding: 255px 0px 325px;
+  }
+  @include responsive(lg) {
+    padding: 235px 0px 205px;
+  }
+  @include responsive(md) {
+    padding: 165px 0px 185px;
+  }
+  @include responsive(sm) {
+    padding: 150px 0px 185px;
+  }
+}
+
+.banner__animation {
+  img {
+    position: absolute;
+    z-index: -1;
+  }
+  .btc {
+    max-width: 17vw;
+    height: auto;
+    bottom: -40px;
+    left: 40%;
+    transform: translateX(-40%);
+    animation: pulse 15s infinite linear;
+    @include responsive(xs) {
+      max-width: 20vw;
+      bottom: 0px;
+    }
+  }
+
+  .btc--two {
+    bottom: 40%;
+  }
+  .eth {
+    max-width: 11vw;
+    height: auto;
+    top: 13%;
+    left: 8vw;
+    animation: rotation 15s infinite linear;
+    @include responsive(xs) {
+      top: 25%;
+      max-width: 15vw;
+    }
+  }
+
+  .illustration {
+    max-width: 40vw;
+    height: auto;
+    right: 0%;
+    bottom: -90px;
+    animation: partner 20s infinite alternate-reverse;
+    @include responsive(md) {
+      bottom: -40px;
+    }
+    @include responsive(sm) {
+      max-width: 50vw;
+      bottom: -20px;
+    }
+    @include responsive(xs) {
+      max-width: 30vw;
+      bottom: -20px;
+    }
+  }
+}
+
+.banner--secondary {
+  .banner__animation {
+    .illustration {
+      @include responsive(md) {
+        bottom: 0px;
+      }
+      @include responsive(sm) {
+        bottom: 27%;
+      }
+    }
+  }
+}
+
+.banner--tertiary {
+  .illustration {
+    bottom: 0px;
+  }
+}
+
+.banner--quaternary {
+  .illustration {
+    right: 10%;
+  }
+}
+
+.banner--quinary {
+  .illustration {
+    right: 10%;
+    bottom: 0px;
+    max-width: 22vw;
+  }
+}
+
+.banner__alt {
+  @include responsive(sm) {
+    max-width: 30vw !important;
+  }
+}
+
+.banner--blog {
+  .illustration {
+    bottom: 200px;
+    @include responsive(lg) {
+      bottom: 100px;
+    }
+  }
+  .btc {
+    bottom: 150px;
+    left: 40%;
+    transform: translateX(-40%);
+    @include responsive(lg) {
+      bottom: 50px;
+    }
+  }
+}
+
+.contact--banner {
+  .illustration {
+    right: 5%;
+  }
+}
+
+/* ==== 
+ --------- (4.3) banner styles end ---------
+ ==== */

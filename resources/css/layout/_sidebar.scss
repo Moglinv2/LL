@@ -1,0 +1,178 @@
+/* ==== 
+ --------- (4.4) sidebar secction styles start ---------
+ ==== */
+
+ .dashboard {
+    position: relative;
+  }
+  
+  .sidebar {
+    position: sticky;
+    top: 130px;
+    @include responsive(xl) {
+      position: fixed;
+      top: 0px;
+      left: -100px;
+      bottom: 0px;
+      z-index: 99999;
+      width: 350px;
+      height: 100vh;
+      overflow-y: auto;
+      background-color: $primary-color;
+      box-shadow: $primary-shadow;
+      padding-top: 50px;
+      opacity: 0;
+      visibility: hidden;
+      transition: $primary-transition;
+      &::-webkit-scrollbar {
+        width: 5px;
+      }
+      &::-webkit-scrollbar-track {
+        background-color: $secondary-color;
+        border-radius: 5px;
+      }
+      &::-webkit-scrollbar-button,
+      &::-webkit-scrollbar-thumb {
+        background-color: $senary-color;
+        border-radius: 5px;
+      }
+      @include responsive(xs) {
+        width: 300px;
+      }
+      @include responsive(sm) {
+          padding-top: 30px;
+      }
+    }
+  }
+  
+  .close__sidebar {
+      display: none;
+    @include responsive(xl) {
+        display: block;
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      a {
+        font-size: 30px;
+      }
+      i {
+        font-size: 24px;
+        color: $septenary-color;
+      }
+    }
+  }
+  
+  .sidebar__active {
+    @include responsive(xl) {
+      left: 0px;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  
+  .main__content {
+    position: sticky;
+    top: 120px;
+    @include responsive(xl) {
+      position: static;
+    }
+  }
+  
+  .sidenav__wrapper {
+    padding: 30px 0px;
+    border-radius: 10px;
+    background-color: $primary-color;
+    ul {
+      margin: 0px;
+      padding: 0px 30px;
+      @include responsive(xl) {
+        padding: 0px 30px;
+      }
+      li {
+        margin-top: 0px;
+        margin-bottom: 10px;
+        &:last-of-type {
+          margin-bottom: 0px;
+        }
+      }
+    }
+    a {
+      padding: 20px 20px 20px 30px;
+      display: block;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background-color: #3d3d98;
+      border-radius: 10px;
+      font-weight: 500;
+      color: $white;
+      transition: $primary-transition;
+      @include responsive(xl) {
+        padding: 20px;
+      }
+      @include responsive(sm) {
+          padding: 15px 20px;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      &:hover {
+        background-color: #5555bf;
+      }
+    }
+    .sidenav__active {
+      background-color: #5555bf;
+    }
+    hr {
+      margin: 0px;
+      margin-top: 30px;
+    }
+    .logout {
+      a {
+        background-color: transparent;
+        padding-bottom: 0px;
+        &:hover {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+  
+  .sidenav__footer {
+    margin-top: 30px;
+    @include responsive(xl) {
+      margin-top: 0px;
+    }
+    h6 {
+      padding: 0px 20px 20px 30px;
+    }
+    hr {
+      margin: 0px;
+    }
+  
+    .sidenav__time {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding: 0px 20px 0px 30px;
+      p {
+        margin-top: 0px;
+        padding-top: 20px;
+        display: flex;
+        align-items: center;
+        img {
+          max-width: 100%;
+          height: auto;
+          display: inline-block;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+  
+  /* ==== 
+   --------- (4.4) sidebar secction styles end ---------
+   ==== */
+  

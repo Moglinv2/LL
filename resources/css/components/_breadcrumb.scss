@@ -1,0 +1,59 @@
+/* ==== 
+ --------- (3.2) breadcrumbs styles start ---------
+ ==== */
+
+// breadcrumb styles start
+.breadcrumb {
+  margin: 0px;
+  padding: 0px;
+  .breadcrumb-item {
+    margin-top: 0px;
+    @include top(0px);
+    color: $white;
+    padding: 0px 20px;
+    a {
+      color: $white;
+      &:hover {
+        color: $septenary-color;
+      }
+    }
+    &::before {
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      content: "\f061";
+      position: absolute;
+      left: -7px;
+      font-size: 14px;
+      color: $white;
+    }
+    &:first-of-type {
+      padding-left: 0px;
+      &::before {
+        content: none;
+      }
+    }
+  }
+  .active {
+    color: $white;
+  }
+}
+
+.breadcrumb--secondary {
+  margin-top: 0px;
+  margin-bottom: -4px;
+  @include responsive(sm) {
+    margin-top: 7px;
+  }
+}
+
+.breadcrumb--tertiary {
+  margin-top: 15px;
+  margin-bottom: -4px;
+}
+
+.breadcrumb--quinary {
+  margin-top: 20px;
+}
+/* ==== 
+ --------- (3.2) breadcrumb styles end ---------
+ ==== */

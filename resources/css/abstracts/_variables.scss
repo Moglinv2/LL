@@ -1,0 +1,41 @@
+/* ==== 
+ --------- (1.2) variables start ---------
+ ==== */
+// Jost google fonts source
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+// font family
+$jost: "Jost", sans-serif;
+
+// theme default
+$theme-font: $jost;
+$theme-bg: #1d1d42;
+$theme-color: #ffffff;
+
+// colors
+$white: #ffffff;
+$black: #000000;
+$primary-color: #343483;
+$secondary-color: #483fbe;
+$tertiary-color: #25255a;
+$quaternary-color: #4934d3;
+$quinary-color: #5338bc;
+$senary-color: #13d487;
+$septenary-color: #00ff66;
+$ocotonary-color: #141432;
+$nonary-color: #e8e8ff;
+
+// transitions
+$primary-transition: all 0.3s ease-out;
+$secondary-transition: all 0.4s ease-in;
+
+// box shadow
+$primary-shadow: 0px 12px 81px 0px rgba(0, 0, 0, 0.72);
+$secondary-shadow: 0 4px 10px rgba(0, 0, 0, 0.12), 0 3px 8px rgba(0, 0, 0, 0.24);
+
+// border radius
+$primary-radius: 10px;
+$secondary-radius: 20px;
+/* ==== 
+ --------- (1.2) variables end ---------
+ ==== */

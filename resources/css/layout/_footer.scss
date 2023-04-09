@@ -1,0 +1,172 @@
+/* ==== 
+ --------- (4.5) footer styles start ---------
+ ==== */
+
+.footer {
+  background-color: $tertiary-color;
+  margin-top: 184px;
+  position: relative;
+  z-index: 1;
+  @include responsive(lg) {
+    margin-top: 168px;
+  }
+  @include responsive(sm) {
+    margin-top: 128px;
+  }
+  @include responsive(xs) {
+    margin-top: 152px;
+  }
+}
+
+// newsletter
+.newsletter {
+  position: relative;
+  top: -184px;
+  margin-bottom: -184px;
+  @include center(1076px);
+  padding: 60px 40px;
+  @include background($primary-color, no-repeat, auto, center center);
+  border-radius: 20px;
+  .newsletter__header {
+    @include center(470px);
+  }
+  @include responsive(lg) {
+    background-size: contain;
+    top: -168px;
+    margin-bottom: -168px;
+  }
+  @include responsive(sm) {
+    padding: 50px 20px;
+    top: -128px;
+    margin-bottom: -128px;
+  }
+  @include responsive(xs) {
+    top: -152px;
+    margin-bottom: -152px;
+  }
+  input {
+    &::placeholder {
+      color: rgba($color: $white, $alpha: 0.5);
+    }
+  }
+}
+
+.footer__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #7a77d3;
+  @include responsive(md) {
+    flex-direction: column;
+  }
+  @include responsive(sm) {
+    padding-bottom: 23px;
+  }
+  .logo {
+    img {
+      max-width: 165px;
+      height: auto;
+      @include responsive(sm) {
+        max-width: 120px;
+        height: auto;
+      }
+    }
+  }
+  ul {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    @include responsive(md) {
+      margin-top: 25px;
+    }
+    @include responsive(sm) {
+      text-align: center;
+      margin-top: 10px;
+    }
+    li {
+      display: inline-block;
+      margin-top: 0px;
+      @include responsive(sm) {
+        margin-top: 19px;
+      }
+      a {
+        padding: 0px 15px;
+        line-height: 24px;
+        font-weight: 600;
+        color: $white;
+        @include responsive(sm) {
+          padding: 0px 10px;
+        }
+        &:hover {
+          color: $senary-color;
+        }
+      }
+      &:last-of-type {
+        a {
+          padding-right: 0px;
+          @include responsive(sm) {
+            padding-right: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer__credit {
+  padding: 30px 0px;
+  @include responsive(sm) {
+    padding: 25px 0px;
+  }
+}
+
+.footer__credit__left {
+  p {
+    a {
+      color: $white;
+      line-height: inherit;
+      font-weight: 600;
+      display: inline;
+      font-size: inherit;
+      letter-spacing: inherit;
+      &:hover {
+        color: $senary-color;
+      }
+    }
+  }
+}
+
+.footer__credit__right {
+  @include responsive(md) {
+    margin-top: 20px;
+  }
+}
+
+.footer__animation {
+  .left__illustration {
+    display: inline-block;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    z-index: -1;
+    opacity: 0.5;
+    max-width: 26vw;
+    height: auto;
+    animation: foot 10s infinite alternate-reverse;
+  }
+  .right__illustration {
+    display: inline-block;
+    max-width: 25vw;
+    height: auto;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    z-index: -1;
+    animation: foot 7s infinite alternate;
+  }
+}
+
+/* ==== 
+ --------- (4.5) footer styles end ---------
+ ==== */

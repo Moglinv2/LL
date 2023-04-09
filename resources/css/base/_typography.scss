@@ -1,0 +1,190 @@
+/* ==== 
+ --------- (2.2) typography styles start ---------
+ ==== */
+
+// paragraph styles
+p,
+th,
+td,
+li,
+input,
+textarea,
+select,
+label,
+blockquote,
+span,
+legend {
+  @include font(18px, 30px, 400, $nonary-color);
+  margin-top: -7px;
+  @include responsive(sm) {
+    font-size: 16px;
+    line-height: 28px;
+    margin-top: -5px;
+  }
+  &.primary {
+    font-size: 24px;
+    line-height: 34px;
+    color: $white;
+    margin-top: -6px;
+    @include responsive(lg) {
+      font-size: 20px;
+      line-height: 30px;
+    }
+    @include responsive(sm) {
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+  &.secondary {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+    color: $white;
+    margin-top: -4px;
+    @include responsive(sm) {
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+  &.tertiary {
+    font-size: 16px;
+    line-height: 22px;
+    color: $white;
+    margin-top: -4px;
+    @include responsive(sm) {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}
+
+//  heading styles
+h1,
+h1 > a {
+  @include font(76px, 99px, 700, $white);
+  margin-top: -16px;
+  @include responsive(lg) {
+    font-size: 57px;
+    line-height: 74px;
+    margin-top: -12px;
+  }
+  @include responsive(sm) {
+    font-size: 43px;
+    line-height: 56px;
+    margin-top: -9px;
+  }
+}
+
+h2,
+h2 > a {
+  @include font(57px, 74px, 700, $white);
+  margin-top: -12px;
+  @include responsive(lg) {
+    font-size: 43px;
+    line-height: 56px;
+    margin-top: -9px;
+  }
+  @include responsive(sm) {
+    font-size: 32px;
+    line-height: 42px;
+    margin-top: -7px;
+  }
+}
+
+h3,
+h3 > a,
+h3 > span {
+  @include font(43px, 56px, 700, $white);
+  margin-top: -9px;
+  @include responsive(lg) {
+    font-size: 32px;
+    line-height: 42px;
+    margin-top: -7px;
+  }
+  @include responsive(sm) {
+    font-size: 24px;
+    line-height: 32px;
+    margin-top: -5px;
+  }
+}
+
+h4,
+h4 > a {
+  @include font(32px, 42px, 700, $white);
+  margin-top: -7px;
+  @include responsive(lg) {
+    font-size: 24px;
+    line-height: 32px;
+    margin-top: -5px;
+  }
+  @include responsive(sm) {
+    font-size: 20px;
+    line-height: 28px;
+    margin-top: -5px;
+  }
+}
+
+h5,
+h5 > a {
+  @include font(24px, 32px, 700, $white);
+  margin-top: -5px;
+  @include responsive(lg) {
+    font-size: 20px;
+    line-height: 28px;
+    margin-top: -5px;
+  }
+  @include responsive(sm) {
+    font-size: 18px;
+    line-height: 24px;
+    margin-top: -4px;
+  }
+}
+
+h6,
+h6 > a {
+  @include font(18px, 24px, 600, $white);
+  margin-top: -4px;
+  @include responsive(sm) {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+// link styles
+a,
+button {
+  font-size: 18px;
+  line-height: 30px;
+  font-family: $jost;
+  text-decoration: none;
+  color: $ocotonary-color;
+  font-weight: 400;
+  display: inline-block;
+  border: 0px;
+  outline: 0px;
+  transition: $primary-transition;
+  @include responsive(sm) {
+    font-size: 16px;
+    line-height: 28px;
+  }
+  &.primary {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+    color: $white;
+    @include responsive(sm) {
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+  &:hover {
+    text-decoration: none;
+    color: $white;
+    border: 0px;
+    outline: 0px;
+  }
+}
+
+/* ==== 
+ --------- (2.2) typography styles end ---------
+ ==== */

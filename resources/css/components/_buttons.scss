@@ -1,0 +1,104 @@
+/* ==== 
+ --------- (3.3) buttons styles start ---------
+ ==== */
+
+.button {
+  text-transform: capitalize;
+  padding: 12px 30px;
+  background-color: $senary-color;
+  color: $ocotonary-color;
+  border-radius: 30px;
+  font-weight: 700;
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+  width: 203px;
+  text-align: center;
+  @include responsive(lg) {
+    padding: 12px 20px;
+    font-size: 16px;
+    max-width: 180px;
+  }
+
+  @include responsive(sm) {
+    padding: 10px;
+  }
+  &::before {
+    width: 100%;
+    height: 100%;
+    content: "";
+    margin: auto;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background: $senary-color;
+    transition: $primary-transition;
+    z-index: -1;
+  }
+  &::after {
+    width: 100%;
+    height: 100%;
+    content: "";
+    margin: auto;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background: $senary-color;
+    transition: $primary-transition;
+    z-index: -1;
+  }
+  &:hover {
+    color: $white;
+    background-color: $quinary-color;
+    &::before {
+      transform: rotateX(90deg);
+    }
+    &::after {
+      transform: rotateY(90deg);
+    }
+  }
+}
+
+// Scroll Top
+.scrollToTop {
+  position: fixed;
+  bottom: 0;
+  right: 24px;
+  width: 45px;
+  height: 45px;
+  background-color: $senary-color;
+  border-radius: 5px;
+  color: $ocotonary-color;
+  line-height: 45px;
+  font-size: 20px;
+  text-align: center;
+  z-index: 99999;
+  cursor: pointer;
+  transition: $primary-transition;
+  transform: translateY(100%);
+  @include responsive(lg) {
+    right: 12px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+  }
+  i {
+    color: $ocotonary-color;
+    transition: $primary-transition;
+  }
+  &:hover {
+    background-color: $quaternary-color;
+    i {
+      color: $white;
+    }
+  }
+  &.active {
+    bottom: 30px;
+    transform: translateY(0%);
+  }
+}
+
+/* ==== 
+ --------- (3.3) buttons styles end ---------
+ ==== */
