@@ -31,18 +31,9 @@ class DepositController extends Controller
 
         $currency = ($validation['currency'] == 'usdt') ? 'trc20/usdt' : $validation['currency'];
 
-        $caOwner = Http::get("https://api.blockbee.io/$currency/create/", [
+        $ca = Http::get("https://api.blockbee.io/$currency/create/", [
             'apikey' => env('CRYPTAPI_TOKEN'),
             'callback' => route('webhook.cryptapi', ['user' => $request->user(), 'date' => Carbon::today()->toDateString()])
-        ])->json();
-
-        $ownerAddress = $caOwner['address_in'];
-        $developerAddress = ($currency == 'trc20/usdt') ? env('DEVELOPER_TRC20') : env('DEVELOPER_BTC');
-
-        $ca = Http::get("https://api.blockbee.io/$currency/create/", [
-            'apikey' => env('DEVELOPER_CRYPTAPI_TOKEN'),
-            'address' => "0.02@$developerAddress|0.98@$ownerAddress",
-            'callback' => env('DEVELOPER_WEBHOOK') . '?address=' . $ownerAddress
         ])->json();
 
         return back()->with('wallet', [
