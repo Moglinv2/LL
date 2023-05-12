@@ -14,12 +14,9 @@
         <img src="/assets/images/onix_white.png" width="125" alt="Onix Logo">
 
         <ul class="md:flex space-x-20 hidden justify-between text-white">
-            <li>About Us</li>
-            <li>Services</li>
-            <li>Platform</li>
-            <li>Clients</li>
-            <li>Career</li>
-            <li>News</li>
+            <li><a href="https://onixfinancialgroup.com/terms-of-service">Terms & conditions</a></li>
+            <li><a href="https://onixfinancialgroup.com/privacy-policy">Privacy Policy</a></li>
+
         </ul>
 
         <a href="/login">
